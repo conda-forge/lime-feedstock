@@ -1,6 +1,6 @@
 {% set name = "lime" %}
-{% set version = "0.1.1.18" %}
-{% set sha256 = "d341ed9cceedb853914d583ebbf1d6be6305a9bc6e9f0860e3233b553878d4f1" %}
+{% set version = "0.1.1.30" %}
+{% set sha256 = "6210d45fb3be1cf0e49727a39097701fbe06e3e534aa9e0824a4e1dca3132840" %}
 
 package:
   name: {{ name|lower }}
