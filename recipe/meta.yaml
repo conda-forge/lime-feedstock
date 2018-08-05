@@ -1,6 +1,6 @@
 {% set name = "lime" %}
-{% set version = "0.1.1.31" %}
-{% set sha256 = "701a546bd43613d3850d89f0fa7c31b12be7cc8c0c9307f6ad22a914f0c492c1" %}
+{% set version = "0.1.1.32" %}
+{% set sha256 = "be276ef93c9ab08721ebd77f81a5c6259995e93fbb3b98b6dad927baac6b312b" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
