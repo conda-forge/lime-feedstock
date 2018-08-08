@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -32,7 +32,7 @@ about:
   home: https://github.com/marcotcr/lime
   license: BSD-2-Clause
   license_family: BSD
-#  license_file: LICENSE  # When added to MANIFEST.in – marcotcr/lime#40
+  license_file: LICENSE
   summary: 'Explaining the predictions of any machine learning classifier'
   doc_url: https://lime-ml.readthedocs.io/
   dev_url: https://github.com/marcotcr/lime
