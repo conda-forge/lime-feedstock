@@ -1,6 +1,6 @@
 {% set name = "lime" %}
-{% set version = "0.1.1.37" %}
-{% set sha256 = "54e27c309b73d2df9b1a16253312d6a9914a64cc1f2319dec6cd0797715619fc" %}
+{% set version = "0.2.0.0" %}
+{% set sha256 = "98310cfa4bc910f304ec7f1850dd8450d1db50bb8e1baec5e84851ea49904714" %}
 
 package:
   name: {{ name|lower }}
@@ -33,7 +33,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Explaining the predictions of any machine learning classifier'
+  summary: Explaining the predictions of any machine learning classifier
   doc_url: https://lime-ml.readthedocs.io/
   dev_url: https://github.com/marcotcr/lime
 
