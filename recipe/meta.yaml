@@ -1,32 +1,39 @@
 {% set name = "lime" %}
 {% set version = "0.2.0.1" %}
-{% set sha256 = "76960e4f055feb53e89b5022383bafc87b63f25bac6265984b0a333d1a57f781" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lime-{{ version }}.tar.gz
+  sha256: 76960e4f055feb53e89b5022383bafc87b63f25bac6265984b0a333d1a57f781
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
 
 requirements:
-  build:
+  host:
+    - python >=3.6
     - pip
-    - python
-    - setuptools
   run:
-    - python
+    - python >=3.6
+    - matplotlib-base
+    - numpy
+    - scipy
+    - tqdm
+    - scikit-learn >=0.18
+    - scikit-image >=0.12
 
 test:
   imports:
     - lime
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/marcotcr/lime
@@ -40,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - proinsias
+    - ocefpaf
